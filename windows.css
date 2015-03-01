@@ -1,0 +1,87 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+.window {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.window:nth-child(1) {
+  background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url('images/office.jpg');
+  background-size: cover;
+  top: 0%;
+}
+
+.window:nth-child(2) {
+  /*background-color: rgba(248,140,45,.85);*/
+  background: rgba(255,255,255,.8); /* Old browsers */
+  top: 100%;
+}
+
+.window:nth-child(3) {
+  /*background: rgba(230,230,230,.85);*/
+  /*background-image: url('images/greyzz.png');
+*/
+   background: rgba(255,255,255,.8);
+  top: 200%;
+  height: 110%;
+}
+.window:nth-child(4) {
+  height: 160%;
+  background: rgba(255,255,255,.9);
+  z-index: 1000000;
+  top: 310%;
+  overflow: hidden;
+}
+.window:nth-child(5) {
+  background: rgba(255,255,255,.9);  
+  top: 470%;
+  z-index: 1000;
+}
+.window:nth-child(6) {
+  /*background-image: url('images/greyzz.png');*/
+  background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url('images/5.jpg');
+  background-size: cover;
+  top: 570%;
+}
+@media screen and (max-width: 1000px) {
+    .window {
+    height: 150%;
+    }
+    .window:nth-child(1) {
+    top: 0%;
+    }
+
+  .window:nth-child(2) {
+    top: 150%;
+    height: 150%;
+  }
+
+  .window:nth-child(3) {
+    top: 300%;
+    height: 250%;
+  }
+
+  .window:nth-child(4) {
+    top: 550%;
+  }
+
+  .window:nth-child(5) {
+    top: 700%;
+  }
+
+  .window:nth-child(6) {
+    top: 850%;
+  }
+  }
