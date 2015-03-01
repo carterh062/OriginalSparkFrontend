@@ -33,7 +33,7 @@ html, body {
   height: 110%;
 }
 .window:nth-child(4) {
-  height: 160%;
+  height: 177%;
   background: rgba(255,255,255,.9);
   z-index: 1000000;
   top: 310%;
@@ -41,19 +41,19 @@ html, body {
 }
 .window:nth-child(5) {
   background: rgba(255,255,255,.9);  
-  top: 470%;
+  top: 487%;
   z-index: 1000;
 }
 .window:nth-child(6) {
   /*background-image: url('images/greyzz.png');*/
   background-image: 
     linear-gradient(
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.7)
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
     ),
     url('images/5.jpg');
   background-size: cover;
-  top: 570%;
+  top: 587%;
 }
 @media screen and (max-width: 1000px) {
     .window {

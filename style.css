@@ -125,7 +125,6 @@ blockquote, q {
 #team-bundle h4{
     font-size: 35px;
     color: rgb(46,46,46);
-    font-weight: 600;
     text-align: left;
     margin-left: 193px;
     margin-bottom: 10px;
@@ -349,6 +348,14 @@ blockquote, q {
     height: 100px;
     margin-top: -50px;
 }
+.page-break-clients{
+    width: 400px;
+    height: 100px;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    display: block;
+}
 #cssmenu ul li a {
     color: #ADD8E6;
     display: block;
@@ -430,7 +437,6 @@ blockquote, q {
     font-size: 2.0em;
     color: rgb(55,55,55);
     text-align: center;
-    font-weight: 600;
 }
 .products-column h4 {
     font-size: 1.0em;
@@ -730,7 +736,7 @@ blockquote, q {
 }
 .moving-headline {
     width: 500px;
-    text-align: center;
+    text-align: left;
     color: rgb(244, 124, 25);
 }
 .products-column {
@@ -891,8 +897,7 @@ body {
     text-decoration: none;   
     outline: 0;   
     text-align: center;
-    font-size: 25px;        
-    text-shadow: 0 1px 0 rgba(255,255,255,.7);
+    font-size: 25px;
     letter-spacing: -.065em;
     font-family: "Hammersmith One", sans-serif;     
     -webkit-transition: all .25s ease-in-out;
@@ -939,12 +944,12 @@ a.orange:hover {
 
 a.slight-orange {
     background-color: rgba(205,114,20,1);
-    color: rgba(133,32,28,.2);
+    color: rgba(234,234,234,1.0);
     border-color: rgba(205,114,20,.2);
 }
 
 a.slight-orange:hover {
-    color: rgba(133,32,28,1);
+    color: rgba(234,234,234,.2);
 }
 
 .round span.round {
@@ -1257,7 +1262,7 @@ input:focus, textarea:focus {
     display: block;
 }
 .client-column h3{
-    font-size: 30px;
+    font-size: 21px;
     text-align: center;
     margin-bottom: 20px;
     margin-top: 20px;
