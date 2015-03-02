@@ -20,10 +20,9 @@ html, body, div, span, applet, object, iframe, h2, h3, h4, h5, h6, p, blockquote
 }
 
 #footer {
-    bottom: 0;
     height: 20px;
-    margin-bottom: -200px;
-    position: fixed;
+    position: absolute;
+    bottom: -40px;
     width: 100%;
     z-index: -1;
 }
@@ -41,8 +40,6 @@ html, body, div, span, applet, object, iframe, h2, h3, h4, h5, h6, p, blockquote
 #footer h3 {
     color: black;
     font-size: 15px;
-    margin-top: -20px;
-    position: absolute;
     right: 25px;
     z-index: 10000;
 }
@@ -114,24 +111,26 @@ blockquote, q {
     opacity: 1.0;
 }
 #team-bundle {
-    width: 1000px;
+    width: 1200px;
     height: auto;
     padding-top: 10px;
     margin: auto;
     border-radius: 50px;
     text-align: center;
     display: block;
+    margin-top: 100px;
 }
 #team-bundle h4{
     font-size: 35px;
     color: rgb(46,46,46);
-    text-align: left;
-    margin-left: 193px;
     margin-bottom: 10px;
+    display: inline;
+    vertical-align: middle;
 }
 .team-member-block {
     width: 200px;
     height: 200px;
+    vertical-align: middle;
     display: inline-block;
     background-color: rgba(200, 200, 200, .1);
     text-align: left;
@@ -186,6 +185,7 @@ blockquote, q {
 .team-subtext {
     font-size: 20px;
     margin-bottom: 3px;
+    text-align: center;
 }
 .team-desc {
     font-size: 20px;
@@ -239,12 +239,12 @@ blockquote, q {
     color: #ADD8E6;
     font-size: 2.0vw;
     line-height: 42px;
-    margin-top: 150px;
+    margin-top: 80px;
     text-align: left;
     text-shadow: 0px -3px 6px rgba(0, 0, 0, .7);
 }
 .large-message {
-    margin-top: 200px;
+    margin-top: 130px;
 }
 .logo-embed {
     color: rgb(180, 180, 180);
@@ -313,7 +313,7 @@ blockquote, q {
     line-height: 1;
     list-style: none;
     margin: 0;
-    margin-bottom: 1px;
+    margin-top: 7px;
     margin-left: 200px;
     padding: 0;
     text-align: right;
@@ -413,7 +413,7 @@ blockquote, q {
 
     line-height: 40px;
     margin: auto;
-    margin-top: 8%;
+    margin-top: 100px;
     margin-bottom: 125px;
     text-align: left;
     width: 90%;
@@ -437,6 +437,7 @@ blockquote, q {
     font-size: 2.0em;
     color: rgb(55,55,55);
     text-align: center;
+    text-shadow: 0px -1px 6px rgba(0, 0, 0, .7);
 }
 .products-column h4 {
     font-size: 1.0em;
@@ -484,10 +485,10 @@ blockquote, q {
     left: 0;
     width: 2100px;
     height: 150px;
+    margin-top: 100px;
     overflow: hidden;
     overflow-x: hidden;
     background-color: rgba(255,255,255,.8);
-    margin-top: 150px;
     line-height: 300px;
 }
 #clients-carousel ul {
@@ -512,15 +513,19 @@ blockquote, q {
 .testimonial-column {
     text-align: center;
     color: white;
-    height: 0px;
+    height: 250px;
     margin-right: 30px;
     margin-left: 30px;
     margin-bottom: 100px;
     margin-top: 10px;
     vertical-align: bottom;
+    border: 2px solid rgb(155,155,155);
+    --webkit-box-shadow: inset 0px 0px 4px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 4px 0px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 4px 0px rgba(0,0,0,0.75);
 }
 .testimonial-column h3 {
-    font-size: 1.2em;
+    font-size: 20px;
     text-align: left;
     color: #ADD8E6;
 }
@@ -774,12 +779,13 @@ body {
     text-align: left;
     height: 250px;
     line-height: 25px;
+    width: auto;
+    margin: 0 auto;
 }
 .testimonial:before, .testimonial:after {
     content: "\201C";
     font-size: 25px;
     line-height: 1;
-    color: rgb(244, 124, 25);
     font-style: normal;
     display: inline;
 }
@@ -804,11 +810,13 @@ body {
     margin: 0 0 0 25px;
 }
 .testimonial-author {
-    margin-top: 5px;
-    color: rgb(55,55,55);
-    font-size: 28px;
+    margin-top: 25px;
+    color: rgb(244, 124, 25);
+    font-size: 22px;
     width: 100%;
     text-align: right;
+    padding-bottom: 10px;
+    margin-left: -15px;
 }
 .testimonial-author span {
     font-size: 12px;
@@ -832,7 +840,7 @@ body {
 .wedo {
     height:360px;
     width: 48%;
-    margin-top: 80px;
+    margin-top: 100px;
 }
 .wedo h3 {
     text-align: center;
@@ -1262,14 +1270,14 @@ input:focus, textarea:focus {
     display: block;
 }
 .client-column h3{
-    font-size: 21px;
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    font-size: 16px;
+    text-align: left;
+    margin-left: 65px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 .client-column ul{
     list-style-type: none;
-    color: rgb(100,100,100);
     text-align: left;
     margin-left: 65px;
 }

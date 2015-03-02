@@ -4,7 +4,7 @@ html, body {
 }
 .window {
   width: 100%;
-  height: 100%;
+  height: 700px;
   position: absolute;
 }
 .window:nth-child(1) {
@@ -15,34 +15,36 @@ html, body {
     ),
     url('images/office.jpg');
   background-size: cover;
-  top: 0%;
+  top: 0;
 }
 
 .window:nth-child(2) {
   /*background-color: rgba(248,140,45,.85);*/
-  background: rgba(255,255,255,.8); /* Old browsers */
-  top: 100%;
+  background: rgba(255,255,255,.6); /* Old browsers */
+  top: 700px;
+  height: 800px;
 }
 
 .window:nth-child(3) {
   /*background: rgba(230,230,230,.85);*/
   /*background-image: url('images/greyzz.png');
 */
-   background: rgba(255,255,255,.8);
-  top: 200%;
-  height: 110%;
+   background: rgba(255,255,255,.6);
+   height: 850px;
+  top: 1500px;
 }
 .window:nth-child(4) {
-  height: 177%;
-  background: rgba(255,255,255,.9);
+  background: rgba(255,255,255,.6);
   z-index: 1000000;
-  top: 310%;
+  height: 1250px;
+  top: 2350px;
   overflow: hidden;
 }
 .window:nth-child(5) {
-  background: rgba(255,255,255,.9);  
-  top: 487%;
+  background: rgba(255,255,255,.6); 
+  top: 3600px;
   z-index: 1000;
+  height: 1000px;
 }
 .window:nth-child(6) {
   /*background-image: url('images/greyzz.png');*/
@@ -53,7 +55,7 @@ html, body {
     ),
     url('images/5.jpg');
   background-size: cover;
-  top: 587%;
+  top: 4600px;
 }
 @media screen and (max-width: 1000px) {
     .window {
