@@ -116,11 +116,31 @@ blockquote, q {
     padding-top: 10px;
     margin: auto;
     border-radius: 50px;
-    text-align: center;
+    text-align: left;
     display: block;
     margin-top: 100px;
+    margin-left: 250px;
+}
+#team-bundle-2 {
+    width: 1200px;
+    height: auto;
+    padding-top: 10px;
+    margin: auto;
+    border-radius: 50px;
+    text-align: left;
+    display: block;
+    margin-top: 10px;
+    margin-left: 250px;
 }
 #team-bundle h4{
+    font-size: 35px;
+    color: rgb(46,46,46);
+    margin-bottom: 10px;
+    margin-right: 85px;
+    display: inline;
+    vertical-align: middle;
+}
+#team-bundle-2 h4{
     font-size: 35px;
     color: rgb(46,46,46);
     margin-bottom: 10px;
@@ -1296,4 +1316,8 @@ input:focus, textarea:focus {
 #social{
     display: block;
     margin-top: 15px;
+}
+#email-contact {
+    font-size: 35px;
+    text-align: center;
 }
