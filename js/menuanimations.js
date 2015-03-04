@@ -170,10 +170,10 @@ $('.menu-item').click(function(e) {
     //footer code
 
 tween = TweenMax.to("#footer", .5, {
-    'margin-bottom': '40px'
+    'bottom': '20px'
 });
 scene = new ScrollScene({
-        triggerElement: "#inquiries-box"
+        triggerElement: "iframe"
     })
     .setTween(tween)
     .addTo(controller);
@@ -221,3 +221,37 @@ $(document).scroll(function() {
         });
     }
 });
+var menuopen = false;
+document.querySelector( "#nav-toggle" )
+    .addEventListener( "click", function() {
+      this.classList.toggle( "active" );
+    });
+$('#nav-toggle').click(function(){
+    if(!menuopen){
+        $('#cssmenu ul').animate({
+                    height: 300
+                }, 500);
+        menuopen = true;
+        $('#cssmenu').css({
+            "background-color": "rgba(30,30,30,.99)"
+        });
+    }
+    else{
+        $('#cssmenu ul').animate({
+                    height: 3
+                }, 500,function(){
+                    $('#cssmenu').css({
+            "background-color": "rgba(30,30,30,0.0)"
+        });
+                });
+        menuopen = false;
+    }
+
+});
+
+
+
+
+
+
+

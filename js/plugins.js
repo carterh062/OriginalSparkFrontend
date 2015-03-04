@@ -1,13 +1,3 @@
-$('#clients-carousel').jcarousel({
-    wrap: 'circular',
-    animation: {
-        duration: 3000,
-        easing: 'linear',
-    }
-});
-$('#clients-carousel').jcarouselAutoscroll({
-    interval: 0
-});
 $('.testimonials').slick({
     infinite: true,
     slidesToShow: 3,
@@ -17,8 +7,24 @@ $('.testimonials').slick({
     adaptiveHeight: false,
     autoplay: true,
     autoplaySpeed: 8000,
+    responsive: [
+        {
+          breakpoint: 1300,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+          }
+        },
+        {
+          breakpoint: 1000,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false
+          }
+        }
+    ]
 });
-
 $('.window').windows({
 snapping: false,
 snapInterval: 1100,

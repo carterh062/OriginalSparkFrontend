@@ -14,7 +14,7 @@
       <!-- Latest compiled and minified JavaScript -->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
       <link rel="stylesheet" href="style.css" type="text/css" />
-      <link rel="stylesheet" href="windows.css" type="text/css" />
+      <link rel="stylesheet" href="windows1.css" type="text/css" />
       <script src="windows.js"></script>
       <script src="jquery.fittext.js"></script>
       <script src="TweenMax.min.js"></script>
@@ -169,7 +169,7 @@
       <div id="more-jill-montaigne" class="white-popup mfp-hide team-member-lb">
          <img src="http://www.realestatetaxgroup.com/wp-content/uploads/2013/03/empty-profile.png">
            <h1>Jill Montaigne</h1>
-           <h2>President, Original Spark</h2>
+           <h2>President</h2>
            <h4>Born in Philadelphia, Jill spent her formative years in Guadalajara, Mexico after her parents retired there. She attributes her keen listening skills to being dropped into a Spanish speaking school before she knew how to say her first ‘hola’, and she has been actively listening ever since.</br></br> Prior to founding Original Spark, Jill served in a variety of senior positions including: Sullivan (Partner and Media Practice Lead; eMap Publishing (GM of JV with the NFL); Time Inc (NY Regional Manager); CBS Television (Mid-west Market); Vintners International (VP, Marketing); Campbell Soup (Brand Director); and Coopers & Lybrand (staff auditor). </br></br> Jill is also active in her community, serving as the chair of over 18 major Ad Women of New York events and now on its Board of Directors (2nd VP/Executive Committee) for a third year. She also advises Brooklyn’s Brave New World Repertory Theater Company on best practices. Most importantly she volunteers her (somewhat shaky) skills each week in the kitchens of God’s Love We Deliver. Jill resides in Brooklyn with her family, and as often as possible, can be found swimming laps at her local Y.</h4>
       </div>
       <div id="more-dick-roth" class="white-popup mfp-hide team-member-lb">
@@ -306,6 +306,7 @@
             <li class='menu-item'><a href='#'><span>Team</span></a></li>
             <li class='last menu-item'><a href='#'><span>Contact</span></a></li>
          </ul>
+         <a id="nav-toggle"><span></span></a>
       </div>
       <div class="thin-question">
          <img src="images/question-mark.png">
@@ -317,7 +318,7 @@
       <section class="window">
          <div class="page-content" id="our-message">
             <div class="category-column message-column">
-               <h1 class="large-message" style="color: white;">WE READ </br><span class="bigger">ADVERTISERS' </span>MINDS</span></h1>
+               <h1 id="large-message" style="color: white;">WE READ </br><span class="bigger">ADVERTISERS' </span>MINDS</span></h1>
             </div>
             <div class="category-column message-column">
                <!-- <span class="logo-embed">ORIGINAL
@@ -374,33 +375,39 @@
       <div id="products-columns">
       <div class="products-column category-column">
       <h3>Agency Performance </br>Index™</h3>
-      <button type="button" href="#more-api" class="more-api btn-hidden btn btn-info">MORE</button>
-      <button type="button" class="btn-hidden btn btn-info samp-btn">Sample</button>
+      <ul class="btn-hidden">
+          <li><a href="#more-api" class="round orange open-popup-link btn-hidden">More<span class="round">Agency Performance Index™</span></a></li>
+          <li><a href="#" class="round slight-orange btn-hidden">Sample<span class="round">See a sample API</span></a></li>
+      </ul>
       </div>
       <div class="products-column category-column" style="vertical-align:middle;">
       <h3>Market </br>Advisories</h3>  
-      <button type="button" href="#more-ma" class="more-ma btn-hidden btn btn-info">MORE</button>
+      <ul class="btn-hidden">
+          <li><a href="#more-ma" class="round orange open-popup-link btn-hidden">More<span class="round">Market Advisories</span></a></li>
+      </ul>
       </div>
       <div class="products-column category-column">
       <h3>In-depth Qualitative </br>Interviews</h3>
-      <button type="button" href="#more-iqi" class="more-interview btn-hidden btn btn-info">MORE</button>
+      <ul class="btn-hidden">
+          <li><a href="#more-iqi" class="round orange open-popup-link btn-hidden">More<span class="round">In Depth Qualitative Interviews</span></a></li>
+      </ul>
       </div>
       </div>
       <div id="buttons-columns">
-      <div class="products-column category-column">
+      <div class="products-column category-column btn-non">
       <ul>
-          <li><a href="#more-api" class="round orange open-popup-link">More<span class="round">Agency Performance Index™</span></a></li>
-          <li><a href="#" class="round slight-orange">Sample<span class="round">See a sample API</span></a></li>
+          <li><a href="#more-api" class="round orange open-popup-link btn-non">More<span class="round">Agency Performance Index™</span></a></li>
+          <li><a href="#" class="round slight-orange btn-non">Sample<span class="round">See a sample API</span></a></li>
       </ul>
       </div>
-      <div class="products-column category-column">
+      <div class="products-column category-column btn-non">
       <ul>
-          <li><a href="#more-ma" class="round orange open-popup-link">More<span class="round">Market Advisories</span></a></li>
+          <li><a href="#more-ma" class="round orange open-popup-link btn-non">More<span class="round">Market Advisories</span></a></li>
       </ul>
       </div>
-      <div class="products-column category-column">
+      <div class="products-column category-column btn-non">
       <ul> 
-          <li><a href="#more-iqi" class="round orange open-popup-link">More<span class="round">In Depth Qualitative Interviews</span></a></li>
+          <li><a href="#more-iqi" class="round orange open-popup-link btn-non">More<span class="round">In Depth Qualitative Interviews</span></a></li>
       </ul>
       </div>
       <img class="page-break-products" src="images/page-break.png">
@@ -411,21 +418,17 @@
       <div id="clients-trigger" class="spacer s0"></div>
       <div class="page-content" id="clients">
       <h1 class="moving-headline" id="clients-head">CLIENTS <a class="open-popup-link" href="#more-clients" id="more-clients-button">see all</a></h1>
-      <div id="jcarousel-wrapper">
-      <div id="clients-carousel" data-jcarousel="true">
-         <ul>
-            <li><img style="height: 120px;" src="https://www.facebook.com/images/fb_icon_325x325.png"></li>
-            <li><img style="height: 120px;" src="http://www.authormedia.com/wp-content/uploads/2013/04/pinterest_badge_red.png"></li>
-            <li><img style="height: 150px;" src="https://pbs.twimg.com/profile_images/489407803014905857/wi9Y1Pyh.png"></li>
-            <li><img src="http://www.iab.net/media/image/new-iab-logo.gif"></li>
-            <li><img style="height: 120px;" src="http://upload.wikimedia.org/wikipedia/commons/thumb/7/77/The_Weather_Channel_logo_2005-present.svg/2000px-The_Weather_Channel_logo_2005-present.svg.png"></li>
-            <li><img src="http://upload.wikimedia.org/wikipedia/commons/2/29/Initiative_Logo_Blue_RGB.jpg"></li>
-            <li><img src="http://upload.wikimedia.org/wikipedia/en/thumb/4/4d/Meredith_Corporation.svg/703px-Meredith_Corporation.svg.png"></li>
-            <li><img src="http://images.bwwstatic.com/tvnetworklogos/0FD01ECC-A9CE-2221-D887FE17363EAFFB.jpg"></li>
-         </ul>
+      <div id="clients-carousel">
+         <img style="height: 120px;" src="https://www.facebook.com/images/fb_icon_325x325.png">
+         <img style="height: 120px;" src="http://www.authormedia.com/wp-content/uploads/2013/04/pinterest_badge_red.png">
+         <img style="height: 150px;" src="https://pbs.twimg.com/profile_images/489407803014905857/wi9Y1Pyh.png">
+         <img src="http://www.iab.net/media/image/new-iab-logo.gif">
+         <img style="height: 120px;" src="http://upload.wikimedia.org/wikipedia/commons/thumb/7/77/The_Weather_Channel_logo_2005-present.svg/2000px-The_Weather_Channel_logo_2005-present.svg.png">
+         <img src="http://upload.wikimedia.org/wikipedia/commons/2/29/Initiative_Logo_Blue_RGB.jpg">
+         <img src="http://upload.wikimedia.org/wikipedia/en/thumb/4/4d/Meredith_Corporation.svg/703px-Meredith_Corporation.svg.png">
+         <img src="http://images.bwwstatic.com/tvnetworklogos/0FD01ECC-A9CE-2221-D887FE17363EAFFB.jpg">
       </div>
-      </div>
-      <h1 class="moving-headline" id="testimonials-head" style="margin-top: 500px;">WHAT OUR CLIENTS SAY</h1>
+      <h1 class="moving-headline" id="testimonials-head" style="margin-top: 100px;">WHAT OUR CLIENTS SAY</h1>
       <div class="arrow-down"></div>
       <div class="arrow-down"></div>
       <div class="testimonials">
@@ -492,7 +495,7 @@
       <div class="team-member-block">
          <img src="images/jill.jpg">
          <h2 class="team-name">Jill Montaigne</h2>
-         <h3 class="team-subtext">President, Original Spark</h3></br>
+         <h3 class="team-subtext">President</h3></br>
          <p class="team-desc">Born in Philadelphia, Jill spent her formative years in Guadalajara, Mexico  
          </p>
          <a href="#more-jill-montaigne" class="open-popup-link team-member-more">More</a>
@@ -540,7 +543,8 @@
       </section>
       <section class="window">
       <div id="contact-trigger" class="spacer s0"></div>
-         <div class="page-content" id="contact">
+         <div class="page-content">
+          <div id="contact">
             <div id="inquiries" class="category-column">
                <h1 id="contact-head"  style="color: white;">Contact</h1>
                <div id="inquiries-box">
@@ -550,7 +554,7 @@
                   <p style="color: #ADD8E6;">70 Washington Street Suite 11M</p>
                   <p style="color: #ADD8E6;">Brooklyn, New York 11201</p>
                   </br></br>
-                  <a  href="#contact-us-popup" id="email-contact" class="open-popup-link">EMAIL</a>
+                  <a href="#contact-us-popup" id="email-contact" class="open-popup-link">EMAIL</a>
                   </br></br>
                   <p style="color: #ADD8E6;">info@originalspark.com</p>
                   </br></br>
@@ -560,17 +564,19 @@
                </div>
             </div>
             <div class="category-column" id="map-column">
-               <iframe width='500' height='400' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d3024.7332108390065!2d-73.98993!3d40.701873!3m2!1i1024!2i768!4f13.1!2m1!1sOriginal+Spark%2C+Inc.+70+Washington+Street+Suite+11M+Brooklyn%2C+New+York+11201!5e0!3m2!1sen!2sus!4v1425323577135'></iframe>
+               <iframe src='https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d3024.7332108390065!2d-73.98993!3d40.701873!3m2!1i1024!2i768!4f13.1!2m1!1sOriginal+Spark%2C+Inc.+70+Washington+Street+Suite+11M+Brooklyn%2C+New+York+11201!5e0!3m2!1sen!2sus!4v1425323577135'></iframe>
                <h3>Follow us!</h3>
                <div id="social">
                <a class="social-button" href="https://twitter.com/OriginalSpark"><img src="images/twitter.png"></a>
                <a class="social-button" href="https://www.linkedin.com/pub/jill-montaigne/5/792/88"><img src="images/linked.png"></a>
                </div>
             </div>
-      </div>
+          </div>
+         </div>
       </section>
       </div>
    </body>
+   <script src="js/basic-slider.js"></script>
    <script type="text/javascript" src="js/plugins.js"></script>
    <script type="text/javascript" src="js/teamanimations.js"></script>
    <script type="text/javascript" src="js/wordanimations.js"></script>

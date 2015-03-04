@@ -18,15 +18,12 @@ html, body, div, span, applet, object, iframe, h2, h3, h4, h5, h6, p, blockquote
     padding: 0;
     vertical-align: baseline;
 }
-
-#footer {
-    height: 20px;
-    position: absolute;
+#footer{
+    position: fixed;
+    right: 0;
     bottom: -40px;
-    width: 100%;
-    z-index: -1;
+    right: 15px;
 }
-
 .pushed-right {
     color: white;
     font-family: 'Futura-OS';
@@ -36,12 +33,6 @@ html, body, div, span, applet, object, iframe, h2, h3, h4, h5, h6, p, blockquote
     text-align: left;
     vertical-align: bottom;
     z-index: 10;
-}
-#footer h3 {
-    color: black;
-    font-size: 15px;
-    right: 25px;
-    z-index: 10000;
 }
 .small-header {
     font-size: 5em;
@@ -81,8 +72,7 @@ blockquote, q {
 .page-content {
     height: 80%;
     margin: auto;
-    margin-top: 80px;
-    width: 90%;
+    width: 100%;
 }
 .minor {
     text-align: left;
@@ -111,41 +101,38 @@ blockquote, q {
     opacity: 1.0;
 }
 #team-bundle {
-    width: 1200px;
+    width: 100%;
     height: auto;
     padding-top: 10px;
     margin: auto;
     border-radius: 50px;
-    text-align: left;
+    text-align: center;
+
     display: block;
-    margin-top: 100px;
-    margin-left: 250px;
 }
 #team-bundle-2 {
-    width: 1200px;
+    width: 100%;
     height: auto;
     padding-top: 10px;
     margin: auto;
     border-radius: 50px;
-    text-align: left;
+    text-align: center;
     display: block;
-    margin-top: 10px;
-    margin-left: 250px;
 }
 #team-bundle h4{
     font-size: 35px;
     color: rgb(46,46,46);
-    margin-bottom: 10px;
-    margin-right: 85px;
-    display: inline;
+    padding-bottom: 20px;
+    display: block;
     vertical-align: middle;
 }
 #team-bundle-2 h4{
     font-size: 35px;
     color: rgb(46,46,46);
     margin-bottom: 10px;
-    display: inline;
+    display: block;
     vertical-align: middle;
+    text-align: center;
 }
 .team-member-block {
     width: 200px;
@@ -158,6 +145,8 @@ blockquote, q {
     margin-left: 2px;
     margin-right: 2px;
     cursor: default;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .team-member-block:hover {
     background-color: rgba(255, 255, 255, 1.0);
@@ -223,18 +212,31 @@ blockquote, q {
     overflow: hidden;
     height: 100%;
 }
+#contact{
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
 .category-column {
     border-radius: 15px;
     display: inline-block;
     height: 100%;
     margin-bottom: 10px;
-    margin-right: 0px;
     vertical-align: top;
     width: 49%;
+}
+.bigger {
+    font-size: 9.0vw;
+}
+.page-content h1 {
+    color: rgb(244, 124, 25);
+    text-shadow: 0px -3px 6px rgba(0, 0, 0, .7);
+    margin-top: 100px;
 }
 #our-message {
     opacity: 1.0;
     overflow: hidden;
+    width: 90%;
 }
 #our-message h1 {
     font-size: 7.0vw;
@@ -245,13 +247,6 @@ blockquote, q {
     padding: 1px;
     overflow: hidden;
 }
-.bigger {
-    font-size: 9.0vw;
-}
-.page-content h1 {
-    color: rgb(244, 124, 25);
-    text-shadow: 0px -3px 6px rgba(0, 0, 0, .7);
-}
 #desc-head {
     z-index: 100000;
 }
@@ -259,12 +254,12 @@ blockquote, q {
     color: #ADD8E6;
     font-size: 2.0vw;
     line-height: 42px;
-    margin-top: 80px;
+    margin-top: 150px;
     text-align: left;
     text-shadow: 0px -3px 6px rgba(0, 0, 0, .7);
 }
-.large-message {
-    margin-top: 130px;
+#large-message {
+    margin-top: 200px;
 }
 .logo-embed {
     color: rgb(180, 180, 180);
@@ -323,7 +318,6 @@ blockquote, q {
     font-size: 23px;
     letter-spacing: 2px;
     margin-bottom: 5px;
-    margin-left: 40px;
     text-align: center;
     vertical-align: bottom;
     z-index: 10;
@@ -361,12 +355,12 @@ blockquote, q {
 .page-break{
     width: 400px;
     height: 100px;
-
+    display: block;
+    margin: auto;
 }
 .page-break-products{
     width: 400px;
     height: 100px;
-    margin-top: -50px;
 }
 .page-break-clients{
     width: 400px;
@@ -501,34 +495,21 @@ blockquote, q {
     overflow-x: hidden;
 }
 #clients-carousel {
-    position: absolute;
-    left: 0;
-    width: 2100px;
-    height: 150px;
+    width: 100%;
+    height: auto;
     margin-top: 100px;
     overflow: hidden;
     overflow-x: hidden;
-    background-color: rgba(255,255,255,.8);
-    line-height: 300px;
-}
-#clients-carousel ul {
-    position: relative;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-#clients-carousel li {
-    margin-right: 100px;
-    float: left;
-    border-radius: 25px;
+    text-align: center;
+    line-height: 150px;
+    background-color: rgb(255,255,255);
 }
 #clients-carousel img {
     width: auto;
-    height: 90px;
-    margin-right: 20px;
-    margin-left: 20px;
-    vertical-align: middle;
-    margin-top: -152px;
+    display: inline-block;
+    height: 70px;
+    margin-right: 15px;
+    margin-left: 15px;
 }
 .testimonial-column {
     text-align: center;
@@ -566,101 +547,43 @@ blockquote, q {
     padding-right: 20px;
     height: 350px;
 }
-@media screen and (max-width: 1000px) {
-    .embed-raise-rotate {
-        margin-left: -5px;
-    }
-    .large-message {
-        margin-top: 100px;
-    }
-    .testimonial-column {
-        margin-top: 50px;
-    }
-    .btn-hidden {
-        display: inline-block;
-    }
-    .btn-non {
-        display: none;
-    }
-    .message-text {
-        margin-top: 150px;
-    }
-    .thin-question {
-        margin: 200px 0 0 -50%;
-    }
-    .thin-question img {
-        height: 650px;
-    }
-    .products-column h4 {
-        font-size: 1.1em;
-    }
-    #cssmenu ul li {
-        display: block;
-        float: none;
-    }
-    #cssmenu:hover {
-        opacity: 1.0;
-    }
-    html {} .page-content ul li {
-        font-size: 3.2vw;
-        margin-bottom: 10px;
-    }
-    #site {
-        margin-top: 320px;
-    }
-    .category-column {
-        width: 100%;
-    }
-    .page-content {
-        height: 32%;
-    }
-    #cssmenu a {
-        display: inline-block;
-    }
-    #cssmenu ul {
-        display: block;
-        line-height: 1;
-        list-style: none;
-        margin: 0;
-        margin-right: 0px;
-        padding: 0;
-        text-align: right;
-        zoom: 1;
-    }
-    #cssmenu ul li a {
-        border-bottom: 1px solid rgb(200, 200, 200);
-        box-sizing: border-box;
-        moz-box-sizing: border-box;
-        webkit-box-sizing: border-box;
-        width: 100%;
-    }
-    #cssmenu ul li.last > a, #cssmenu ul li:last-child > a {
-        border: 0;
-    }
-    #cssmenu ul li a:after {
-        display: none;
-    }
-    #cssmenu ul li a:before {
-        display: none;
-    }
-    .thin-question {
-        opacity: 1.0;
-        background-color: transparent;
-        position: absolute;
-    }
-    #products-head {
-        text-align: left;
-    }
-    #wedo-head {
-        text-align: left;
-        margin-bottom: 100px;
-    }
-    #team-head {
-        text-align: left;
-    }
-    #clients-head {
-        text-align: left;
-    }
+#nav-toggle{
+    visibility: hidden;
+}
+#nav-toggle { position: absolute; right: 45px; top: 25px; }
+
+#nav-toggle { cursor: pointer; padding: 10px 35px 16px 0px; }
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  cursor: pointer;
+  height: 5px;
+  width: 35px;
+  background: #ADD8E6;
+  border-radius: 4px;
+  position: absolute;
+  display: block;
+  content: '';
+}
+#nav-toggle span:before {
+  top: -10px; 
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  transition: all 500ms ease-in-out;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
 }
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 #site {
@@ -669,7 +592,7 @@ blockquote, q {
   height:100%;*/
     /*background-color: rgba(134, 197, 218,.5);*/
     
-    background: rgba(50, 50, 50, .85);
+    background: rgba(0,0,0,1);
 }
 .highlight-dgray {
     color: rgb(46, 46, 46);
@@ -681,12 +604,13 @@ blockquote, q {
 }
 #inquiries-box {
     margin: auto;
-    width: 500px;
     margin-top: 30px;
 }
 #inquiries {
     text-align: center;
-    padding-left: 15px;
+    display: inline-block;
+    width: 500px;
+    margin: auto;
 }
 #inquiries h3 {
     color: rgb(244, 124, 25);
@@ -700,13 +624,18 @@ blockquote, q {
 }
 #map-column {
     text-align: center;
-    vertical-align: middle;
+    width: 500px;
+    display: inline-block;
+    margin: auto;
 }
 #map-column h3 {
     color: rgb(244, 124, 25);
     margin-top: 50px;
     font-size: 35px;
     text-align: center;
+}
+#social{
+    padding-bottom: 55px;
 }
 #map-column a {
     font-size: 25px;
@@ -853,14 +782,14 @@ body {
 }
 #desc {
     /*background-color: rgb(248,140,45);*/
-    
-    height: 100%;
     text-align: center;
+    margin: auto;
 }
 .wedo {
     height:360px;
-    width: 48%;
-    margin-top: 100px;
+    width: 400px;
+    margin-top: 50px;
+    display: inline-block;
 }
 .wedo h3 {
     text-align: center;
@@ -879,7 +808,6 @@ body {
     font-size: 2.2em;
     text-align: left;
     margin-left: 50px;
-    width: 500px;
 }
 
 .products-column ul {
@@ -1309,6 +1237,7 @@ input:focus, textarea:focus {
 }
 #testimonials-head{
     color: rgb(75,75,75);
+    text-align: center;
 }
 .social-button:hover{
     opacity: .75;
@@ -1320,4 +1249,154 @@ input:focus, textarea:focus {
 #email-contact {
     font-size: 35px;
     text-align: center;
+}
+.btn-hidden {
+    display: none;
+}
+iframe{
+    margin-top: 120px;
+    width: 400px;
+    height: 400px;
+}
+@media screen and (max-width: 1224px){
+    #cssmenu ul{
+        text-align: center; 
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 750px) {
+    #cssmenu ul{
+        overflow: hidden;
+        height: 3px;
+    }
+    #nav-toggle{
+        visibility: visible;
+    }
+    .embed-raise-rotate {
+        margin-left: -5px;
+    }
+    #large-message {
+        margin-top: 100px;
+    }
+    .testimonial-column {
+        margin-top: 50px;
+    }
+    .message-text {
+        margin-top: 150px;
+    }
+    .thin-question {
+        margin: 200px 0 0 -50%;
+    }
+    .thin-question img {
+        height: 650px;
+    }
+    .products-column h4 {
+        font-size: 1.1em;
+    }
+    #cssmenu ul li {
+        display: block;
+        float: none;
+    }
+    #cssmenu:hover {
+        opacity: 1.0;
+    }
+    html {} .page-content ul li {
+        font-size: 3.2vw;
+        margin-bottom: 10px;
+    }
+    #site {
+        position: absolute;
+    }
+    .category-column {
+        width: 100%;
+    }
+    #cssmenu a {
+        display: inline-block;
+    }
+    #cssmenu ul {
+        display: block;
+        line-height: 1;
+        list-style: none;
+        margin: 0;
+        margin-right: 0px;
+        padding: 0;
+        text-align: right;
+        zoom: 1;
+    }
+    .testimonial{
+        font-size: 15px;
+    }
+    #cssmenu ul li a {
+        border-bottom: 1px solid rgb(200, 200, 200);
+        box-sizing: border-box;
+        moz-box-sizing: border-box;
+        webkit-box-sizing: border-box;
+        width: 100%;
+    }
+    #cssmenu ul li.last > a, #cssmenu ul li:last-child > a {
+        border: 0;
+    }
+    #cssmenu ul li a:after {
+        display: none;
+    }
+    #cssmenu ul li a:before {
+        display: none;
+    }
+    .thin-question {
+        opacity: 1.0;
+        background-color: transparent;
+        position: absolute;
+    }
+    #products-head {
+        text-align: center;
+    }
+    #wedo-head {
+        text-align: center;
+        margin-bottom: 100px;
+    }
+    #team-head {
+        text-align: center;
+    }
+    #clients-head {
+        text-align: center;
+    }
+    .btn-hidden {
+        display: inline-block;
+    }
+    .btn-non {
+        display: none;
+    }
+    #our-message h1{
+        font-size: 8.0vw;
+    }
+    .message-text{
+        font-size:5.0vw;
+        margin-top: 50px;
+    }
+    .wedo ul li{
+        font-size:28px;
+    }
+    .moving-headline{
+        font-size: 30px;
+        text-align: center;
+        margin: auto;
+        width: 300px;
+    }
+    #inquiries-box{
+        text-align: center;
+        width: 250px;
+    }
+    #inquiries{
+        width:250px;
+    }
+    #map-column{
+        width: 250px;
+    }
+}
+@media screen and (max-width:400px){
+    iframe{
+        width: 250px;
+        height: 300px;
+    }
 }

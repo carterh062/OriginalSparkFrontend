@@ -4,9 +4,10 @@ html, body {
 }
 .window {
   width: 100%;
-  height: 100%;
-  position: absolute;
-  box-shadow: 0px 2px 7px -1px rgba(0,0,0,0.75);
+  height: auto;
+  min-height: 100%;
+  display: block;
+  overflow: hidden;
 }
 .window:nth-child(1) {
   background-image: 
@@ -16,72 +17,34 @@ html, body {
     ),
     url('images/office.jpg');
   background-size: cover;
-  top: 0%;
 }
 
 .window:nth-child(2) {
   /*background-color: rgba(248,140,45,.85);*/
-  background: rgb(244,124,25); /* Old browsers */
-  top: 100%;
+  background: rgba(255,255,255,.6); /* Old browsers */
 }
 
 .window:nth-child(3) {
   /*background: rgba(230,230,230,.85);*/
   /*background-image: url('images/greyzz.png');
 */
-   background-color: rgba(0,0,0,.8);
-  top: 200%;
+   background: rgba(255,255,255,.6);
 }
 .window:nth-child(4) {
-  /*background: url(images/bg.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-*/
-  background-color: rgba(134, 197, 218,.25); 
-  top: 300%;
-  position: absolute;
+  background: rgba(255,255,255,.6);
+  z-index: 1000000;
+}
+.window:nth-child(5) {
+  background: rgba(255,255,255,.6); 
   z-index: 1000;
 }
-
-.window:nth-child(5) {
-  background: rgba(50,50,50,.85);
-  z-index: 1000000;
-  top: 400%;
-}
-
 .window:nth-child(6) {
-  background-image: url('images/greyzz.png');
-  top: 500%;
+  /*background-image: url('images/greyzz.png');*/
+  background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('images/5.jpg');
+  background-size: cover;
 }
-@media screen and (max-width: 1000px) {
-    .window {
-    height: 150%;
-    }
-    .window:nth-child(1) {
-    top: 0%;
-    }
-
-  .window:nth-child(2) {
-    top: 150%;
-    height: 150%;
-  }
-
-  .window:nth-child(3) {
-    top: 300%;
-    height: 250%;
-  }
-
-  .window:nth-child(4) {
-    top: 550%;
-  }
-
-  .window:nth-child(5) {
-    top: 700%;
-  }
-
-  .window:nth-child(6) {
-    top: 850%;
-  }
-  }
