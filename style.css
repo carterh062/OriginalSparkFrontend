@@ -496,13 +496,11 @@ blockquote, q {
 }
 #clients-carousel {
     width: 100%;
-    height: auto;
     margin-top: 100px;
     overflow: hidden;
     overflow-x: hidden;
     text-align: center;
     line-height: 150px;
-    background-color: rgb(255,255,255);
 }
 #clients-carousel img {
     width: auto;
@@ -793,7 +791,7 @@ body {
 }
 .wedo h3 {
     text-align: center;
-    font-size: 3.0em;
+    font-size: 2.5em;
     color: rgb(46, 46, 46);
     font-weight: 600;
     text-shadow: 0px -3px 6px rgba(0, 0, 0, .7);
@@ -929,7 +927,9 @@ a.slight-orange:hover {
     -o-text-shadow: 0 1px 1px rgba(0,0,0,.5);
     text-shadow: 0 1px 1px rgba(0,0,0,.5);  
 }
-
+.btn-hidden{
+    margin-left: -15px;
+}
 .orange span {
     background: rgba(0,63,71,.7);       
 }
@@ -943,6 +943,8 @@ a.slight-orange:hover {
   padding: 20px;
   margin: 20px auto;
   border-radius: 5px;
+  max-width: 400px;
+  width: 100%;
   border: 1px solid rgba(140,140,140,.8);
 }
 .contact-popup {
@@ -1114,8 +1116,9 @@ input:focus, textarea:focus {
 }
 .team-member-lb{
     border: 1px solid black;
-    height: 500px;
-    width: 600px;
+    height: auto;
+    width: 100%;
+    max-width: 600px;
     overflow: auto;
     background-image: url('images/greyzz.png');
 }
@@ -1125,7 +1128,8 @@ input:focus, textarea:focus {
     height: 200px;
     border-radius: 100px;
     display: inline-block;
-    margin-left: 175px;
+    margin-left: 25%;
+    border: 1px solid black;
     transition: all .2s ease;
 }
 .team-member-lb img:hover{
@@ -1167,15 +1171,16 @@ input:focus, textarea:focus {
 .product-lb{
     border: 1px solid black;
     background-image: url('images/greyzz.png');
-    width: 600px;
-    height: 400px;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
     text-align: center;
     overflow: auto;
 }
 .product-lb h3{
     font-size: 35px;
     text-align: center;
-    width: 500px;
+    width: 90%;
     color: rgb(244, 124, 25);
     margin: 0 auto;
     margin-bottom: 25px;
@@ -1183,13 +1188,13 @@ input:focus, textarea:focus {
 .product-lb h4{
     font-size: 25px;
     text-align: left;
-    width: 500px;
+    width: 90%;
     margin: auto;
 }
 .product-lb ul{
     text-align: left;
     font-size: 25px;
-    width: 450px;
+    width: 80%;
     margin: auto;
     margin-left: 50px;
     list-style-position: outside;
@@ -1207,7 +1212,8 @@ input:focus, textarea:focus {
     text-shadow: none;
 }
 .clients-lb{
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     height: 400px;
     overflow: auto;
 }
@@ -1383,15 +1389,18 @@ iframe{
         margin: auto;
         width: 300px;
     }
-    #inquiries-box{
-        text-align: center;
-        width: 250px;
-    }
-    #inquiries{
-        width:250px;
-    }
     #map-column{
         width: 250px;
+    }
+    .thin-question{
+        display: none;
+    }
+    body{
+        background-image: url('images/greyzz.png');
+    }
+    iframe{
+        width: 250px;
+        height: 300px;
     }
 }
 @media screen and (max-width:400px){
@@ -1399,4 +1408,53 @@ iframe{
         width: 250px;
         height: 300px;
     }
+    #inquiries{
+        width: 250px;
+    }
+}
+
+.clearout {
+height:20px;
+clear:both;
+}
+.nbs-flexisel-container {
+    position:relative;
+    max-width:100%;
+}
+.nbs-flexisel-ul {
+    position:relative;
+    width:9999px;
+    margin:0px;
+    padding:0px;
+    list-style-type:none;   
+    text-align:center;  
+}
+
+.nbs-flexisel-inner {
+    overflow:hidden;
+    float:left;
+    width:100%;
+    border:1px solid #ccc;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;  
+}
+
+.nbs-flexisel-item {
+    float:left;
+    margin:0px;
+    padding:0px;
+    cursor:pointer;
+    position:relative;
+    line-height:0px;
+    height: 200px;
+}
+.nbs-flexisel-item img {
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+    height: 100px;
 }

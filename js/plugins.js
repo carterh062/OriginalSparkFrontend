@@ -9,7 +9,7 @@ $('.testimonials').slick({
     autoplaySpeed: 8000,
     responsive: [
         {
-          breakpoint: 1300,
+          breakpoint: 1400,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2,
@@ -24,6 +24,31 @@ $('.testimonials').slick({
           }
         }
     ]
+});
+$(window).load(function(){
+  $("#clients-carousel ul").flexisel({
+      visibleItems: 4,
+      animationSpeed: 200,
+      autoPlay: true,
+      autoPlaySpeed: 3000,
+      pauseOnHover: true,
+      clone:true,
+      enableResponsiveBreakpoints: true,
+      responsiveBreakpoints: {
+        portrait: {
+          changePoint:480,
+          visibleItems: 1
+        }, 
+        landscape: {
+          changePoint:640,
+          visibleItems: 2
+        },
+        tablet: {
+          changePoint:768,
+          visibleItems: 3
+        }
+      }
+    });
 });
 $('.window').windows({
 snapping: false,
