@@ -37,15 +37,15 @@ $(window).load(function(){
       responsiveBreakpoints: {
         portrait: {
           changePoint:480,
-          visibleItems: 1
+          visibleItems: 2
         }, 
         landscape: {
           changePoint:640,
-          visibleItems: 2
+          visibleItems: 3
         },
         tablet: {
           changePoint:768,
-          visibleItems: 3
+          visibleItems: 4
         }
       }
     });
@@ -68,3 +68,6 @@ $('.open-popup-link').magnificPopup({
   type:'inline',
   midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
 });
+$('.white-popup').scroll(function(){
+  $(this).find('.mfp-close').css('top', $(this).scrollTop()+'px');
+})

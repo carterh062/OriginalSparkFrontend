@@ -1,7 +1,7 @@
 controller = new ScrollMagic();
 //move question mark to left on opening sequence
 var tween = TweenMax.fromTo("#raise-rotate", .5, {
-    "margin-left": -($('#cssmenu h1').offset().left + 110) + 'px'
+    "margin-left": -($('#cssmenu h1').offset().left + 120) + 'px'
 }, {
     "margin-left": "8"
 });
@@ -13,7 +13,7 @@ var scene = new ScrollScene({
 //make sure question mark stays on margin-left during resize
 $(window).resize(function() {
     tween = TweenMax.fromTo("#raise-rotate", .5, {
-        "margin-left": -($('#cssmenu h1').offset().left + 110) + 'px'
+        "margin-left": -($('#cssmenu h1').offset().left + 120) + 'px'
     }, {
         "margin-left": "8"
     });
@@ -92,37 +92,37 @@ $('.menu-item').click(function(e) {
         if ($(window).width() <= 1000) {
             if ($(this).is($('.menu-item:nth-child(1)'))) {
                 $('html, body').animate({
-                    scrollTop: $(".window:nth-child(1)").offset().top - 318
+                    scrollTop: $(".window:nth-child(1)").offset().top
                 }, 1000,function(){
                     transitioning = false;
                 });
             } else if ($(this).is($('.menu-item:nth-child(2)'))) {
                 $('html, body').animate({
-                    scrollTop: $(".window:nth-child(2)").offset().top - 318
+                    scrollTop: $(".window:nth-child(2)").offset().top +2
                 }, 1000,function(){
                     transitioning = false;
                 });
             } else if ($(this).is($('.menu-item:nth-child(3)'))) {
                 $('html, body').animate({
-                    scrollTop: $(".window:nth-child(3)").offset().top - 318
+                    scrollTop: $(".window:nth-child(3)").offset().top +2
                 }, 1000,function(){
                     transitioning = false;
                 });
             } else if ($(this).is($('.menu-item:nth-child(4)'))) {
                 $('html, body').animate({
-                    scrollTop: $(".window:nth-child(4)").offset().top - 318
+                    scrollTop: $(".window:nth-child(4)").offset().top +2
                 }, 1000,function(){
                     transitioning = false;
                 });
             } else if ($(this).is($('.menu-item:nth-child(5)'))) {
                 $('html, body').animate({
-                    scrollTop: $(".window:nth-child(5)").offset().top - 318
+                    scrollTop: $(".window:nth-child(5)").offset().top+2
                 }, 1000,function(){
                     transitioning = false;
                 });
             } else if ($(this).is($('.menu-item:nth-child(6)'))) {
                 $('html, body').animate({
-                    scrollTop: $(".window:nth-child(6)").offset().top - 318
+                    scrollTop: $(".window:nth-child(6)").offset().top+2
                 }, 1000,function(){
                     transitioning = false;
                 });
@@ -170,7 +170,7 @@ $('.menu-item').click(function(e) {
     //footer code
 
 tween = TweenMax.to("#footer", .5, {
-    'bottom': '20px'
+    'bottom': '-5px'
 });
 scene = new ScrollScene({
         triggerElement: "iframe"
@@ -178,8 +178,9 @@ scene = new ScrollScene({
     .setTween(tween)
     .addTo(controller);
 var t = 2;
+var scrollPos = $(this).scrollTop();
 $(document).scroll(function() {
-    var scrollPos = $(this).scrollTop();
+    scrollPos = $(this).scrollTop();
     if (transitioning == false){
         if (scrollPos <= $(".window:nth-child(2)").offset().top - $(".window:nth-child(2)").height()/2) {
             $(".active").removeClass("active");
@@ -221,10 +222,43 @@ $(document).scroll(function() {
         });
     }
 });
+if (scrollPos > t) {
+    $('#cssmenu').css({
+        "moz-box-shadow": "0px 2px 7px -1px rgba(0,0,0,0.75)",
+        "box-shadow": "0px 2px 7px -1px rgba(0,0,0,0.75)",
+        "webkit-box-shadow": "0px 2px 7px -1px rgba(0,0,0,0.75)"
+    });
+    $('#cssmenu').css({
+        "background-color": "rgba(30,30,30,.99)"
+    });
+} else {
+    $('#cssmenu').css({
+        "moz-box-shadow": "none",
+        "box-shadow": "none",
+        "webkit-box-shadow": "none"
+    });
+    $('#cssmenu').css({
+        "background-color": "rgba(30,30,30,0.0)"
+    });
+}
 var menuopen = false;
 document.querySelector( "#nav-toggle" )
     .addEventListener( "click", function() {
       this.classList.toggle( "active" );
+    });
+    $('.menu-item').click(function(){
+        if(menuopen){
+            $('#cssmenu ul').animate({
+                        height: 3
+                    }, 500,function(){
+                        if($(document).scrollTop() == 2){
+                            $('#cssmenu').css({
+                                "background-color": "rgba(30,30,30,0.0)"
+                            });
+                        }
+                    });
+            menuopen = false;
+        }
     });
 $('#nav-toggle').click(function(){
     if(!menuopen){
@@ -232,17 +266,19 @@ $('#nav-toggle').click(function(){
                     height: 300
                 }, 500);
         menuopen = true;
-        $('#cssmenu').css({
-            "background-color": "rgba(30,30,30,.99)"
-        });
+            $('#cssmenu').css({
+                "background-color": "rgba(30,30,30,.99)"
+            });
     }
     else{
         $('#cssmenu ul').animate({
                     height: 3
                 }, 500,function(){
-                    $('#cssmenu').css({
-            "background-color": "rgba(30,30,30,0.0)"
-        });
+                    if($(document).scrollTop() == 2){
+                        $('#cssmenu').css({
+                            "background-color": "rgba(30,30,30,0.0)"
+                        });
+                    }
                 });
         menuopen = false;
     }
