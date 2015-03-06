@@ -1,28 +1,8 @@
 controller = new ScrollMagic();
 //move question mark to left on opening sequence
-var tween = TweenMax.fromTo("#raise-rotate", .5, {
-    "margin-left": -($('#cssmenu h1').offset().left + 120) + 'px'
-}, {
-    "margin-left": "8"
-});
-var scene = new ScrollScene({
-        triggerElement: "#desc-trigger"
-    })
-    .setTween(tween)
-    .addTo(controller);
+var tween = null;
+var scene = null;
 //make sure question mark stays on margin-left during resize
-$(window).resize(function() {
-    tween = TweenMax.fromTo("#raise-rotate", .5, {
-        "margin-left": -($('#cssmenu h1').offset().left + 120) + 'px'
-    }, {
-        "margin-left": "8"
-    });
-    scene = new ScrollScene({
-            triggerElement: "#desc-trigger"
-        })
-        .setTween(tween)
-        .addTo(controller);
-});
 //If menubar isn't on the second line
 if ($(window).width() > 1000) {
     //make css menu shorter
@@ -71,16 +51,43 @@ if ($(window).width() > 1000) {
     //     .addTo(controller);
 }
 //move text apart 
-tween = TweenMax.fromTo(".pushed-right", .5, {
-    "margin-left": "8px"
-}, {
-    "margin-left": "40px"
-});
-scene = new ScrollScene({
-        triggerElement: "#desc-trigger"
-    })
-    .setTween(tween)
-    .addTo(controller);
+if($(window).width() > 500){
+    tween = TweenMax.fromTo(".pushed-right", .5, {
+        "margin-left": "8px"
+    }, {
+        "margin-left": "40px"
+    });
+    scene = new ScrollScene({
+            triggerElement: "#desc-trigger"
+        })
+        .setTween(tween)
+        .addTo(controller);
+    tween = TweenMax.fromTo("#raise-rotate", .5, {
+    "margin-left": -($('#cssmenu h1').offset().left + 120) + 'px'
+    }, {
+        "margin-left": "8"
+    });
+    scene = new ScrollScene({
+            triggerElement: "#desc-trigger"
+        })
+        .setTween(tween)
+        .addTo(controller);
+    $(window).resize(function() {
+        tween = TweenMax.fromTo("#raise-rotate", .5, {
+            "margin-left": -($('#cssmenu h1').offset().left + 120) + 'px'
+        }, {
+            "margin-left": "8"
+        });
+        scene = new ScrollScene({
+                triggerElement: "#desc-trigger"
+            })
+            .setTween(tween)
+            .addTo(controller);
+    });
+}
+else{
+    $('#raise-rotate').css('margin-left', '8px');
+}
 var transitioning = false;
 $('.menu-item').click(function(e) {
         e.preventDefault();
@@ -167,16 +174,6 @@ $('.menu-item').click(function(e) {
             }
         }
     })
-    //footer code
-
-tween = TweenMax.to("#footer", .5, {
-    'bottom': '-5px'
-});
-scene = new ScrollScene({
-        triggerElement: "iframe"
-    })
-    .setTween(tween)
-    .addTo(controller);
 var t = 2;
 var scrollPos = $(this).scrollTop();
 $(document).scroll(function() {
@@ -202,6 +199,29 @@ $(document).scroll(function() {
             $('.menu-item:nth-child(6)').addClass("active");
         }
     }
+    if(!(!!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/))){
+        if (scrollPos > t) {
+            $('#cssmenu').css({
+                "moz-box-shadow": "0px 2px 7px -1px rgba(0,0,0,0.75)",
+                "box-shadow": "0px 2px 7px -1px rgba(0,0,0,0.75)",
+                "webkit-box-shadow": "0px 2px 7px -1px rgba(0,0,0,0.75)"
+            });
+            $('#cssmenu').css({
+                "background-color": "rgba(30,30,30,.99)"
+            });
+        } else {
+            $('#cssmenu').css({
+                "moz-box-shadow": "none",
+                "box-shadow": "none",
+                "webkit-box-shadow": "none"
+            });
+            $('#cssmenu').css({
+                "background-color": "rgba(30,30,30,0.0)"
+            });
+        }
+    }
+});
+if(!(!!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/))){
     if (scrollPos > t) {
         $('#cssmenu').css({
             "moz-box-shadow": "0px 2px 7px -1px rgba(0,0,0,0.75)",
@@ -221,25 +241,6 @@ $(document).scroll(function() {
             "background-color": "rgba(30,30,30,0.0)"
         });
     }
-});
-if (scrollPos > t) {
-    $('#cssmenu').css({
-        "moz-box-shadow": "0px 2px 7px -1px rgba(0,0,0,0.75)",
-        "box-shadow": "0px 2px 7px -1px rgba(0,0,0,0.75)",
-        "webkit-box-shadow": "0px 2px 7px -1px rgba(0,0,0,0.75)"
-    });
-    $('#cssmenu').css({
-        "background-color": "rgba(30,30,30,.99)"
-    });
-} else {
-    $('#cssmenu').css({
-        "moz-box-shadow": "none",
-        "box-shadow": "none",
-        "webkit-box-shadow": "none"
-    });
-    $('#cssmenu').css({
-        "background-color": "rgba(30,30,30,0.0)"
-    });
 }
 var menuopen = false;
 document.querySelector( "#nav-toggle" )
@@ -287,7 +288,15 @@ $('#nav-toggle').click(function(){
 
 
 
-
+    //footer code
+tween = TweenMax.to("#footer", .5, {
+    'bottom': '-5px'
+});
+scene = new ScrollScene({
+        triggerElement: "#map-column > img"
+    })
+    .setTween(tween)
+    .addTo(controller);
 
 
 

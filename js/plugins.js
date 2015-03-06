@@ -28,9 +28,9 @@ $('.testimonials').slick({
 $(window).load(function(){
   $("#clients-carousel ul").flexisel({
       visibleItems: 4,
-      animationSpeed: 200,
+      animationSpeed: 1000,
       autoPlay: true,
-      autoPlaySpeed: 3000,
+      autoPlaySpeed: 2500,
       pauseOnHover: true,
       clone:true,
       enableResponsiveBreakpoints: true,
@@ -75,6 +75,14 @@ $('.white-popup').scroll(function(){
 var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
 if (isSafari) {
   $('.thin-question').css('display','none');
+  $('#cssmenu').css({
+                            "background-color": "rgba(30,30,30,.99)"
+                        });
+  $('#cssmenu').css({
+                "moz-box-shadow": "0px 2px 7px -1px rgba(0,0,0,0.75)",
+                "box-shadow": "0px 2px 7px -1px rgba(0,0,0,0.75)",
+                "webkit-box-shadow": "0px 2px 7px -1px rgba(0,0,0,0.75)"
+            });
 }
 
 

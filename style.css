@@ -18,6 +18,7 @@ html, body, div, span, applet, object, iframe, h2, h3, h4, h5, h6, p, blockquote
     padding: 0;
     vertical-align: baseline;
 }
+* {-webkit-font-smoothing: subpixel-antialiased;}
 #footer{
     position: fixed;
     right: 0;
@@ -302,7 +303,6 @@ blockquote, q {
     color: rgb(248, 140, 45);
     font-family: 'Futura-?';
     font-size: 40px;
-    margin-left: 0px;
     margin-top: -15px;
     position: absolute;
 }
@@ -357,6 +357,7 @@ blockquote, q {
     display: inline-block;
     margin: 0;
     padding: 0;
+    -webkit-font-smoothing: subpixel-antialiased;
 }
 #cssmenu.align-right ul li {
     float: right;
@@ -385,6 +386,7 @@ blockquote, q {
 #cssmenu ul li a {
     color: #ADD8E6;
     display: block;
+    -webkit-font-smoothing: subpixel-antialiased;
     font-size: 15px;
     moz-transition: color .25s;
     ms-transition: color .25s;
@@ -524,7 +526,7 @@ blockquote, q {
 .testimonial-column {
     text-align: center;
     color: white;
-    height: 250px;
+    height: 320px;
     margin-right: 30px;
     margin-left: 30px;
     margin-bottom: 100px;
@@ -555,7 +557,7 @@ blockquote, q {
     padding-top: 10px;
     padding-left: 20px;
     padding-right: 20px;
-    height: 350px;
+    height: 380px;
 }
 #nav-toggle{
     visibility: hidden;
@@ -776,6 +778,7 @@ body {
     text-align: right;
     padding-bottom: 10px;
     margin-left: -15px;
+    font-weight: 600;
 }
 .testimonial-author span {
     font-size: 12px;
@@ -1276,7 +1279,7 @@ input:focus, textarea:focus {
 .btn-hidden {
     display: none;
 }
-iframe{
+#map-column > img{
     margin-top: 120px;
     width: 400px;
     height: 400px;
@@ -1433,14 +1436,15 @@ iframe{
     }
     .testimonial{
         width: 100%;
-        margin: 0;
+        margin: auto 0;
     }
     .testimonial p{
-        margin: 0;
+        margin: auto 0;
         width: 100%;
     }
     .testimonial-column{
-        margin: 0;
+        margin-left: 0;
+        margin-right: 0;
     }
     .products-column{
         margin-left: 0px;
@@ -1451,7 +1455,7 @@ iframe{
     body{
         background-image: url('images/greyzz.png');
     }
-    iframe{
+    #map-column > img{
         width: 250px;
         height: 300px;
     }
@@ -1460,7 +1464,7 @@ iframe{
     }
 }
 @media screen and (max-width:400px){
-    iframe{
+    #map-column > img{
         width: 250px;
         height: 300px;
     }
@@ -1468,7 +1472,7 @@ iframe{
         width: 250px;
     }
     #cssmenu > a > h1 {
-        margin-left: -15px;
+        margin-left: -35px;
     }
     .page-break{
         width: 100%;
@@ -1491,6 +1495,9 @@ iframe{
     }
     .wedo div{
         width: 400px;
+    }
+    .pushed-right{
+        margin-left: 40px;
     }
 }
 .clearout {
