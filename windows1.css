@@ -32,6 +32,7 @@ html, body {
   /*background-image: url('images/greyzz.png');
 */
    background: rgba(255,255,255,.6);
+   margin-top: -140px;
 }
 .window:nth-child(4) {
   background: rgba(255,255,255,.6);
@@ -50,4 +51,10 @@ html, body {
     ),
     url('images/5.jpg');
   background-size: cover;
+}
+@media screen and (max-width: 750px){
+  .window:nth-child(3){
+        margin-top: 0;
+        text-align: center;
+    }
 }

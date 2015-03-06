@@ -6,7 +6,7 @@ if($(window).width()>=750){
         'font-size': '60px',
         'text-align': 'center'
     }, {
-        "margin-left": "70px",
+        "margin-left": "120px",
         'font-size': "30px",
         'text-align':'left'
     });
@@ -24,7 +24,7 @@ if($(window).width()>=750){
         'font-size': '60px',
         'text-align': 'center'
     }, {
-        "margin-left": "23px",
+        "margin-left": "86px",
         'font-size': "30px",
         'text-align':'left'
     });
@@ -40,7 +40,7 @@ if($(window).width()>=750){
         'font-size': '60px',
         'text-align': 'center'
     }, {
-        "margin-left": "70px",
+        "margin-left": "120px",
         'font-size': "30px",
         'text-align':'left'
     });
@@ -56,7 +56,7 @@ if($(window).width()>=750){
         'font-size': '60px',
         'text-align': 'center'
     }, {
-        "margin-left": "70px",
+        "margin-left": "120px",
         'font-size': "30px",
         'text-align':'left'
     });

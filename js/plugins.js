@@ -36,16 +36,16 @@ $(window).load(function(){
       enableResponsiveBreakpoints: true,
       responsiveBreakpoints: {
         portrait: {
-          changePoint:480,
-          visibleItems: 2
+          changePoint:500,
+          visibleItems: 1
         }, 
         landscape: {
-          changePoint:640,
-          visibleItems: 3
+          changePoint:940,
+          visibleItems: 2
         },
         tablet: {
-          changePoint:768,
-          visibleItems: 4
+          changePoint:1378,
+          visibleItems: 3
         }
       }
     });
@@ -71,3 +71,12 @@ $('.open-popup-link').magnificPopup({
 $('.white-popup').scroll(function(){
   $(this).find('.mfp-close').css('top', $(this).scrollTop()+'px');
 })
+
+var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
+if (isSafari) {
+  $('.thin-question').css('display','none');
+}
+
+
+
+
