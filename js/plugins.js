@@ -28,9 +28,9 @@ $('.testimonials').slick({
 $(window).load(function(){
   $("#clients-carousel ul").flexisel({
       visibleItems: 4,
-      animationSpeed: 1000,
+      animationSpeed: 12000,
       autoPlay: true,
-      autoPlaySpeed: 2500,
+      autoPlaySpeed: 0,
       pauseOnHover: true,
       clone:true,
       enableResponsiveBreakpoints: true,

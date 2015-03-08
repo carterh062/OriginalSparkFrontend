@@ -20,11 +20,11 @@ if($(window).width()>=750){
     $('#testimonials-head').css('margin-left',$('#clients').width()/2-($('#testimonials-head').width()/2))
 
     tween = TweenMax.fromTo("#wedo-head", .5, {
-        "margin-left": ($("#desc").width()/2) - ($('#wedo-head').width()/2),
+        "margin-left": ($("#wedo-page").width()/2) - ($('#wedo-head').width()/2),
         'font-size': '60px',
         'text-align': 'center'
     }, {
-        "margin-left": "86px",
+        "margin-left": "120px",
         'font-size': "30px",
         'text-align':'left'
     });

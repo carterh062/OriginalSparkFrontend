@@ -136,14 +136,14 @@ blockquote, q {
     font-size: 35px;
     color: rgb(46,46,46);
     padding-bottom: 20px;
-    display: block;
+    display: inline-block;
     vertical-align: middle;
 }
 #team-bundle-2 h4{
     font-size: 35px;
     color: rgb(46,46,46);
     margin-bottom: 10px;
-    display: block;
+    display: inline-block;
     vertical-align: middle;
     text-align: center;
 }
@@ -208,6 +208,7 @@ blockquote, q {
     font-size: 20px;
     margin-bottom: 3px;
     text-align: center;
+    font-weight: 600;
 }
 .team-desc {
     font-size: 20px;
@@ -217,6 +218,9 @@ blockquote, q {
 }
 #products {
     opacity: 1.0;
+}
+#wedo-page{
+    border: 1px solid black;
 }
 #clients {
     opacity: 1.0;
@@ -526,7 +530,7 @@ blockquote, q {
 .testimonial-column {
     text-align: center;
     color: white;
-    height: 320px;
+    height: 305px;
     margin-right: 30px;
     margin-left: 30px;
     margin-bottom: 100px;
@@ -792,12 +796,6 @@ body {
     height: 1px;
     background: black;
     background: -webkit-gradient(linear, 0 0, 100% 0, from(black), to(black), color-stop(50%, #ADD8E6));
-}
-#desc {
-    /*background-color: rgb(248,140,45);*/
-    text-align: center;
-    margin: 0 auto;
-
 }
 .wedo {
     height: auto;
@@ -1171,7 +1169,7 @@ input:focus, textarea:focus {
     font-size: 40px;
 }
 .team-member-lb h2{
-    color: rgb(180,180,180);
+    color: rgb(100,100,100);
     text-align: center;
     font-size: 25px;
 }
@@ -1282,7 +1280,7 @@ input:focus, textarea:focus {
 #map-column > img{
     margin-top: 120px;
     width: 400px;
-    height: 400px;
+    height: auto;
 }
 @media screen and (max-width: 1224px){
     #cssmenu ul{
@@ -1406,6 +1404,7 @@ input:focus, textarea:focus {
     .wedo h3{
         font-size: 2.1em;
         margin: auto;
+
     }
     .wedo div{
         width: 100%;
@@ -1414,7 +1413,7 @@ input:focus, textarea:focus {
         margin-left: 25px;
     }
     .wedo{
-        width: 400px;
+        width: 200px;
     }
     .moving-headline{
         font-size: 30px;
@@ -1457,10 +1456,16 @@ input:focus, textarea:focus {
     }
     #map-column > img{
         width: 250px;
-        height: 300px;
+        height: auto;
     }
     .window:nth-child(3){
         margin-top: 70;
+    }
+    #team-bundle h4{
+        display: block;
+    }
+    #team-bundle-2 h4{
+        display: block;
     }
 }
 @media screen and (max-width:400px){
